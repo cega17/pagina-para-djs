@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="sample-player">
+        <audio id="audio-player" controls>
+            <source src="" type="audio/mpeg">
+            Tu navegador no soporta la reproducción de audio.
+        </audio>
+        <p id="sample-info">Escucha un avance de 20 segundos:</p>
+        <button id="play-button">Reproducir</button>
+    </div>
+<script>
+    // Obtén elementos del DOM
+const audioPlayer = document.getElementById('audio-player');
+const playButton = document.getElementById('play-button');
+const sampleInfo = document.getElementById('sample-info');
+
+// Definir tiempo máximo de reproducción en segundos
+const maxPlaybackTime = 20;
+
+// Escuchar evento clic en el botón "Reproducir"
+playButton.addEventListener('click', () => {
+    // Iniciar la reproducción
+    audioPlayer.play();
+    
+    // Deshabilitar el botón de reproducción
+    playButton.disabled = true;
+
+    // Actualizar el texto de información
+    sampleInfo.textContent = `Reproduciendo un avance de ${maxPlaybackTime} segundos...`;
+    
+    // Detener la reproducción después de 20 segundos
+    setTimeout(() => {
+        audioPlayer.pause();
+        audioPlayer.currentTime = 0; // Reiniciar la reproducción al principio
+        playButton.disabled = false; // Habilitar el botón de reproducción
+        sampleInfo.textContent = `Escucha un avance de ${maxPlaybackTime} segundos:`;
+    }, maxPlaybackTime * 1000); // Multiplica por 1000 para convertir a milisegundos
+});
+
+</script>    
+    
+</body>
+</html>

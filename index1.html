@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tu Sitio Web de Música</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Archivo CSS personalizado -->
+    
+        
+</head>
+<body>
+    <div class="header">
+        <div class="container">
+            <h1>Bienvenido a Tu Sitio Web de Música</h1>
+        </div>
+    </div>
+
+    <div class="main-content">
+        <div class="container">
+            <h2>Servicios Destacados</h2>
+            <div class="services">
+                <div class="service-card">
+                    <h2>Servicio 1</h2>
+                    <p>Descripción del Servicio 1.</p>
+                    <a href="#">Más Información</a>
+                </div>
+                <div class="service-card">
+                    <h2>Servicio 2</h2>
+                    <p>Descripción del Servicio 2.</p>
+                    <a href="#">Más Información</a>
+                </div>
+                <div class="service-card">
+                    <h2>Servicio 3</h2>
+                    <p>Descripción del Servicio 3.</p>
+                    <a href="#">Más Información</a>
+                </div>
+            </div>
+
+            <h2>Opciones de Membresía</h2>
+            <div class="membership">
+                <div class="membership-card">
+                    <h2>Membresía Mensual</h2>
+                    <p>Descripción de la membresía mensual.</p>
+                    <a href="#">Suscribirse</a>
+                </div>
+                <div class="membership-card">
+                    <h2>Membresía Trimestral</h2>
+                    <p>Descripción de la membresía trimestral.</p>
+                    <a href="#">Suscribirse</a>
+                </div>
+                <div class="membership-card">
+                    <h2>Membresía Anual</h2>
+                    <p>Descripción de la membresía anual.</p>
+                    <a href="#">Suscribirse</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        // script.js
+
+// Función para mostrar/ocultar un menú de navegación desplegable
+function toggleMenu() {
+    const menu = document.getElementById('menu');
+    menu.classList.toggle('visible');
+}
+
+// Agregar un evento clic a un botón de menú
+const menuButton = document.getElementById('menu-button');
+menuButton.addEventListener('click', toggleMenu);
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Área de Miembros - Iniciar Sesión</title>
+    <link rel="stylesheet" href="inicioSecion.css"> <!-- Archivo CSS personalizado -->
+    
+      
+    
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Iniciar Sesión</h1>
+        </div>
+        <form action="login.php" method="post"> <!-- Debes crear un archivo PHP para manejar el inicio de sesión -->
+            <div class="form-group">
+                <label for="username">Usuario:</label>
+                <input type="text" id="username" name="username" required>
+            </div>
+            <div class="form-group">
+                <label for="password">Contraseña:</label>
+                <input type="password" id="password" name="password" required>
+            </div>
+            <div class="form-group">
+                <button type="submit" class="submit-button">Iniciar Sesión</button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
